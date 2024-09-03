@@ -53,9 +53,64 @@ dziel.addEventListener('click',function(){
         dis3.innerHTML=`nie dziel przez 0`
     }else{
     multi=parseFloat(a.value)/parseFloat(b.value)
-    console.log(multi)
-    console.log(a)
-    console.log(b)
+    // console.log(multi)
+    // console.log(a)
+    // console.log(b)
     
     dis3.innerHTML=`wynik to ${multi}`
+    }})
+ reszta.addEventListener('click',function(){
+    mod=parseFloat(a.value)%parseFloat(b.value)
+    dis3.innerHTML=`wynik to ${mod}`
+    })
+calkowite.addEventListener('click',function(){
+    if(b.value==0){
+        dis3.innerHTML=`nie dziel przez 0`
+    }else{
+    full=parseInt(a.value)/parseInt(b.value)
+    console.log(full)
+    good=parseInt(full)
+    dis3.innerHTML=`wynik to ${good}`
+    }})
+
+    // zd4
+    const dis4=document.getElementById("dis4")
+    const txt1=document.getElementById("txt1")
+    const txt2=document.getElementById("txt2")
+    const txt3=document.getElementById("txt3")
+    const txt4=document.getElementById("txt4")
+    const txt5=document.getElementById("txt5")
+    const check1=document.getElementById("check1")
+    const check2=document.getElementById("check2")
+    const check3=document.getElementById("check3")
+    const check4=document.getElementById("check4")
+    const check5=document.getElementById("check5")
+    const form4=document.getElementById("zd4")
+    
+    form4.addEventListener('change', function(e){
+        e.preventDefault()
+        sum=0
+        if(check1.checked){
+            sum=parseInt(txt1.value)+sum
+            console.log(sum)
+        }
+        if(check2.checked){
+            sum=parseInt(txt2.value)+sum
+        }if(check3.checked){
+            sum=parseInt(txt3.value)+sum
+            console.log(sum)
+        }
+        if(check4.checked){
+            sum=parseInt(txt4.value)+sum
+            console.log(sum)
+        }
+        if(check5.checked){
+            sum=parseInt(txt5.value)+sum
+            console.log(sum)
+            
+        }
+        if(isNaN(sum)){
+            dis4.innerHTML="błąd odznacz puste"
+        }else{
+        dis4.innerHTML=parseInt(sum)
     }})
